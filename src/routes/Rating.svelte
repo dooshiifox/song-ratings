@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SvelteMarkdown from "svelte-markdown";
-	import type { Rating } from "./+page.server";
+	import type { Rating } from "./ratingReader";
 	import { createDisclosure } from "@/disclosure.svelte";
 	import { slide } from "svelte/transition";
 

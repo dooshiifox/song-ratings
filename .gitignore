@@ -1,9 +1,5 @@
 .DS_Store
 node_modules
-# /android
-# /ios
-/build-node
-/build-static
 /.svelte-kit
 /package
 .env
@@ -11,3 +7,4 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+.vscode

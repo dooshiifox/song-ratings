@@ -1,11 +1,7 @@
 <script lang="ts">
-	import type { Rating as RatingType } from "./+page.server";
-	import {
-		SEARCH_PRIORITIES,
-		filterByString,
-		filterMap
-	} from "./searchFilter.js";
+	import type { Rating as RatingType } from "./ratingReader";
 	import Rating from "./Rating.svelte";
+	import { SEARCH_PRIORITIES, filterByString, filterMap } from "albtc";
 
 	let { data } = $props();
 
@@ -49,7 +45,7 @@
 		settledData = filterMap(d, (item) => {
 			if (item.status === "rejected") return null;
 			return item.value;
-		}).toSorted((a, b) => b.meta.rating - a.meta.rating);
+		}).sort((a, b) => b.meta.rating - a.meta.rating);
 	});
 </script>
 
