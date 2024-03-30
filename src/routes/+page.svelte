@@ -82,9 +82,12 @@
 
 				<p class="mx-auto mt-8 max-w-prose">
 					Games are in no particular order in their categories. This is not a
-					ranking of <em>favourite</em> games, just the <em>best</em> games. There
-					is a difference. For example, Minecraft is my favourite game, but nowhere
-					near the top.
+					ranking of <em>favourite</em> games, just the games I had the most fun
+					with. Favourite games would be ranked by how much the game means to me.
+					Fun games is ranked by how much I would steal from it to make my dream
+					game. For example, Minecraft is my favourite game because it means so much
+					to me, but nowhere near the top of this list because there are much better
+					games.
 				</p>
 
 				<p class="mb-2 mt-8 font-bold">General rules</p>
