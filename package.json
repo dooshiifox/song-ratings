@@ -47,7 +47,7 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-cloudflare": "^3.0.1",
-		"albtc": "^0.0.1",
+		"albtc": "^0.0.3",
 		"js-yaml": "^4.1.0",
 		"svelte-markdown": "^0.4.1",
 		"tailwind-merge": "^2.2.2",

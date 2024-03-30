@@ -9,8 +9,8 @@ dependencies:
     specifier: ^3.0.1
     version: 3.0.2(@sveltejs/kit@2.5.4)
   albtc:
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.3
+    version: 0.0.3
   js-yaml:
     specifier: ^4.1.0
     version: 4.1.0
@@ -890,8 +890,8 @@ packages:
       uri-js: 4.4.1
     dev: true
 
-  /albtc@0.0.1:
-    resolution: {integrity: sha512-dKpTmvByf5EI4xfRwwU3v4dDodaGEnbpgaGEiYJVARNKEnA53tZ5S74txFQU7lJX1FqpWEu5/QupyV5nMbM2ZA==}
+  /albtc@0.0.3:
+    resolution: {integrity: sha512-qncqrBC+xx0H/VqIMrD5jdccHxNRuar5Fmu78t55uXn4PYoMoc5kmtb1YrJsml9NX5StceKMZ+LiyneLQhkOxg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     dev: false
 
