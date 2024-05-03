@@ -43,3 +43,7 @@ By the way, you should probably delete all the files in `src/data` before you st
 # Developing
 
 Get `pnpm`, then install all the packages with `pnpm i`. `npm` should work but it's untested. Start the dev server with `pnpm dev` (or `npm run dev`).
+
+# I take suggestions and am open to debates
+
+if you think my opinion on a game is wrong / i should replay it / i should finish it, convince me in the `issues` tab or dm me (discord @dooshii). also please im begging you someone suggest games where you play as a dog i need them.
