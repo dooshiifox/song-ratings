@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SEARCH_PRIORITIES, filterByString, filterMap } from "albtc";
+	import { SEARCH_PRIORITIES, filterByString } from "albtc";
 	import Table, { type SortOrder, type SortBy } from "./Table.svelte";
 
 	let { data } = $props();
@@ -10,16 +10,27 @@
 		if (a === null) return 1;
 		if (b === null) return -1;
 		if (typeof a === "string") return a.localeCompare(b as string);
-		return b - (a as number);
+		return (b as number) - a;
 	}
 
 	let search = $state("");
 	let sort_by = $state<SortBy>("track-album-artist");
 	let sort_order = $state<SortOrder>("desc");
 
+	function toSorted<T>(arr: Array<T>, fn: (a: T, b: T) => number): Array<T> {
+		if (typeof Array.prototype.toSorted === "function") return arr.toSorted(fn);
+		return arr.slice().sort(fn);
+	}
+	function toReversed<T>(arr: Array<T>): Array<T> {
+		if (typeof Array.prototype.toReversed === "function")
+			return arr.toReversed();
+		return arr.slice().reverse();
+	}
+
 	let sorted_data = $derived.by(() => {
 		if (sort_by === "track-album-artist") {
-			return data.ratings.toSorted(
+			return toSorted(
+				data.ratings,
 				(a, b) =>
 					compare(a.album, b.album) ||
 					// Yes this reversal is intentional
@@ -31,12 +42,12 @@
 		}
 
 		const sort_by_but_typed_correctly = sort_by;
-		return data.ratings.toSorted((a, b) =>
+		return toSorted(data.ratings, (a, b) =>
 			compare(a[sort_by_but_typed_correctly], b[sort_by_but_typed_correctly])
 		);
 	});
 	let sorted_ordered_data = $derived(
-		sort_order === "desc" ? sorted_data : sorted_data.toReversed()
+		sort_order === "desc" ? sorted_data : toReversed(sorted_data)
 	);
 	let search_results = $derived(
 		filterByString(search, sorted_ordered_data, (item) => [
