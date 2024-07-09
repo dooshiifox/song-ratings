@@ -110,7 +110,7 @@
 				{/if}
 			</button>
 
-			<div class="w-8" />
+			<div class="w-8"></div>
 
 			<button
 				onclick={() => (page = Math.max(page - 1, 0))}
